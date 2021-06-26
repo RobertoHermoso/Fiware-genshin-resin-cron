@@ -1,0 +1,17 @@
+{
+  "name": "fiware-genshin-resin-cron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cron": "^1.8.2",
+    "request": "^2.88.2",
+    "underscore": "^1.13.1"
+  }
+}
