@@ -5,7 +5,7 @@ var _ = require("underscore");
 var job = new CronJob(
   "*/16 * * * *",
   function () {
-    console.log("You will see this message every second");
+    console.log("Updating resin");
     axios
       .get("http://localhost:1026/v2/entities")
       .then((response) => {
