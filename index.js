@@ -3,7 +3,7 @@ const axios = require("axios");
 var _ = require("underscore");
 
 var job = new CronJob(
-  "*/10 * * * *",
+  "*/16 * * * *",
   function () {
     console.log("You will see this message every second");
     axios
@@ -13,8 +13,8 @@ var job = new CronJob(
         var resin = _.where(data, { type: "Resin" });
         resin.forEach((r) => {
           if (r.resin.value !== 160) {
-            var aux = 10;
-            if (r.resin.value > 150) {
+            var aux = 2;
+            if (r.resin.value > 158) {
               aux = 160 - r.resin.value;
             }
             axios.post("http://localhost:1026/v2/entities/" + r.id + "/attrs", {
